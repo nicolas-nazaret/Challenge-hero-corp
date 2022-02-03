@@ -1,0 +1,152 @@
+body {
+    /* Je définis la couleur du fond et le style de police de ma page. */
+    background-color: #d3d3d3;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    /* Je définis la taille par défaut des polices de ma page. */
+    font-size: 16px;
+}
+
+#container {
+    background-color: #fff;
+    width: 800px;
+    margin: 16px auto;
+    /* margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    margin-bottom: 16px; */
+    border:1px solid black;
+    padding: 16px;
+}
+
+#header, #footer {
+    text-align: center;
+}
+
+#main-title {
+    border-top: 2px solid #8B0000;
+    border-bottom: 2px solid #8B0000;
+    /* Avec rem, j'indique que ma police fait 3 fois la taille par défaut. */
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+#sub-title {
+    background-color: #000;
+    color: #FFF;
+    padding: .4rem 1rem;
+    font-size: 1.2rem;
+}
+
+#presentation, #actors {
+    width: 600px;
+    margin: 0 auto;
+}
+
+#presentation, #footer {
+    background-color: #eee;
+    padding: 2rem 1rem;
+}
+
+h2, h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    color: #8B0000;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.hero-corp-logo {
+    /* Une image étant de type inline-block, elle sera redimensionnable. */
+    width: 5rem;
+    margin: 2rem 0;
+}
+
+#presentation-header {
+    text-align: center;
+}
+
+.texte-courant {
+    
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.texte-courant strong {
+    font-weight: bold;
+}
+
+#presentation-aside {
+    font-style: italic;
+    font-size: 0.8rem;
+    text-align: center;
+    border-top: 1px solid #000;
+    padding-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.actors li {
+    background-color: #eee;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.actors li a {
+    text-transform: uppercase;
+    color: #8B0000;
+    display: block;
+    padding: .5rem;
+}
+
+.actors li:hover {
+    background-color: rgb(161, 161, 161);
+}
+
+/* On définit #pictures comme étant une container flex. Tous les enfants directs vont se mettre sur la même ligne. */
+#pictures {
+    display: flex;
+    /* J'utilise flex-wrap: wrap pour indiquer que tous les enfants qui dépassent de la largeur du conteneur, vont à la ligne. */
+    flex-wrap: wrap;
+
+    flex-direction: column;
+}
+
+.picture {
+    border: 1px solid grey;
+    /* En définissant les enfants à 33%, ils vont faire environ 1 tiers de la largeur de la ligne et donc se mettre trois par ligne. */
+    width: 33%;
+    padding: 2rem;
+    text-align: center;
+    margin: 0 auto 1rem;
+    /* Pour définir l'alignement vertical de chaque article, on passe ceux-ci aussi en flex.  */
+    display: flex;
+    /* Comme le comportement par défaut de flex est de se mettre sur la même ligne, on casse ce comportement en passant l'axe à la verticale. */
+    flex-direction: column;
+    /* On définit l'alignement des enfants d'un article (image, titre et paragraphe) avec space-between. Le premier élément s'alignera en haut de l'article, le second au milieu, le troisième à la fin. */
+    justify-content: space-between;
+}
+
+/* On donne l'ordre à l'image de ne jamais dépasser la taille de son parent (100%). */
+.picture img {
+    max-width: 100%;
+    width: auto;
+}
